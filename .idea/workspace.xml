@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f362ab-0b68-477e-8560-fade767386bd" name="Changes" comment="model파일 적용">
+    <list default="true" id="c4f362ab-0b68-477e-8560-fade767386bd" name="Changes" comment="hover 시에 모션 변경 (시도)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/public/models/Walking.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite-project/src/MyElement3D.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/vite-project/src/MyElement3D.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite-project/src/assets/react.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="modelHeight" />
+        <entry key="$PROJECT_DIR$" value="modelController" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +33,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "modelHover",
+    "git-widget-placeholder": "modelController-Hover",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projects/react-test",
     "node.js.detected.package.eslint": "true",
