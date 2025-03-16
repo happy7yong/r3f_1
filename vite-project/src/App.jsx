@@ -3,8 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import MyElement3D from './MyElement3D.jsx'
 import './App.css'
 
-function App()
-{
+function App() {
 
   return (
     <>
