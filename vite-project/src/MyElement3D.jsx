@@ -5,16 +5,27 @@ import { useControls } from "leva";
 
 function MyElement3D() {
     // GLTF 모델 로드
-    const model = useGLTF("/models/Walking.glb"); // public/models/Walking.glb에 위치
+    const model = useGLTF("/models/model.glb"); // public/models/model.glb에 위치
     const { actions, names } = useAnimations(model.animations, model.scene); // 애니메이션 데이터 가져오기
 
-    // Leva를 사용하여 애니메이션 선택
+    // Leva를 사용하여 애니메이션 선택 UI 생성
     const { actionName } = useControls({
         actionName: {
-            value: names[0], // 기본 애니메이션
-            options: names, // 애니메이션 목록
+            value: names[0], // 기본 애니메이션 이름 설정
+            options: names, // 애니메이션 이름 목록
         },
     });
+
+    // 선택된 애니메이션 실행
+    useEffect(() => {
+        const action = actions[actionName];
+        if (action) {
+            action.reset().fadeIn(0.5).play(); // 애니메이션 시작
+            return () => {
+                action.fadeOut(0.5); // 컴포넌트 언마운트 시 애니메이션 정지
+            };
+        }
+    }, [actionName, actions]);
 
     const [height, setHeight] = useState(0);
 
@@ -36,14 +47,6 @@ function MyElement3D() {
         setHeight(h); // 높이 상태 업데이트
         console.log("Height of the model:", h);
     }, [model.scene]);
-
-    // 선택된 애니메이션 실행
-    useEffect(() => {
-        if (actions && actionName) {
-            actions[actionName]?.reset().fadeIn(0.5).play(); // 선택된 애니메이션 재생
-            return () => actions[actionName]?.fadeOut(0.5); // 컴포넌트 언마운트 시 애니메이션 정지
-        }
-    }, [actionName, actions]);
 
     return (
         <>
